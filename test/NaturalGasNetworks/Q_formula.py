@@ -1,3 +1,5 @@
+# Determine pressure drop in natural gas network using Q_formula
+
 import numpy as np
 from trust_region import trust_region_dog_leg
 

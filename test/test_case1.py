@@ -2,7 +2,7 @@ import numpy as np
 import scipy as sp
 from scipy import optimize as op
 
-from trust_region import trust_region_dog_leg
+from .trust_region import trust_region_dog_leg
 
 global C, Cwr, P_shut, n, ratio
 
