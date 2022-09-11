@@ -1,8 +1,9 @@
+import pytest
+
 import numpy as np
 import scipy as sp
 from scipy import optimize as op
 
-import trust_region
 from trust_region import trust_region_dog_leg
 
 global C, Cwr, P_shut, n, ratio
@@ -252,6 +253,21 @@ tol=1e-5
 sol2 = trust_region_dog_leg(f, g, H, x, r, rmax, eta = eta, gtol=tol)
 print(sol2)
 
+@pytest.mark.a
+def test_a1():
+
+    assert (1) == (1)
+
+def test_result():
+	assert sol2[1] > 0
+
+# content of test_sample.py
+def inc(x):
+    return x + 1
+
+
+def test_answer():
+    assert inc(3) == 4
 
 # print(C[7]*mod_sign1(x[8] - x[4])*abs(x[8]**2- x[4]**2)**n + \
 # 			C[0]*mod_sign1(x[5] - x[4])*abs(x[5]**2- x[4]**2)**n - \
