@@ -2,3 +2,6 @@
 # pytest generated files #
 ##########################
 /.pytest_cache
+
+# Run this to remove all cache files
+# git rm --cached */__pycache__/*
